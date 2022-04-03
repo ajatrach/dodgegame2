@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.net.URL;
 
-public class Character {
+public class Character{
 
     // establish game and image objects, establish final variables for
     // location and size of character, establish changing variables of x position,
@@ -23,16 +23,14 @@ public class Character {
     }
 
     // set up method for finding an image
-    public Image getImage(String path) {
-
-        URL imageURL = Character.class.getResource(path);
-        Image tempImage = Toolkit.getDefaultToolkit().getImage(imageURL);
-        return tempImage;
+    public Image getImage() {
+        Image tempimage = Toolkit.getDefaultToolkit().getImage("character.png");
+        return tempimage;
     }
 
     // paint character that is called by paint method in game
     public void paint(Graphics g) {
-        image = getImage(skin);
+        image = getImage();
         Graphics2D g2 = (Graphics2D) g;
         g2.drawImage(image, x, Y, WIDTH, HEIGHT, game);
     }

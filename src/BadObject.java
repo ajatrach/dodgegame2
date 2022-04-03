@@ -4,6 +4,10 @@ import java.net.URL;
 import java.util.Random;
 
 public class BadObject {
+    public BadObject(Game game) {
+        this.game = game;
+    }
+
 
     // Bad object class will be almost identical to good object class except:
     // -There is no badcollision detection, as that is controlled by the good objects
@@ -16,24 +20,20 @@ public class BadObject {
     private Image image;
     private Game game;
     private static final int DIAMETER = 30;
-    
+
     int y = 0;
     int ya = getRandSpeed();
     int x = getRandX();
     int randomimage = getRandImage();
 
-    public BadObject(Game game) {
-        this.game = game;
-    }
 
-    public Image getImage(String path) {
-        URL imageURL = BadObject.class.getResource(path);
-        Image tempImage = Toolkit.getDefaultToolkit().getImage(imageURL);
+    public Image getImage() {
+        Image tempImage = Toolkit.getDefaultToolkit().getImage("5.png");
         return tempImage;
     }
 
     public void paint(Graphics g) {
-        image = getImage(randomimage + ".png");
+        image = getImage();
         Graphics2D g2 = (Graphics2D) g;
         g2.drawImage(image, x, y, DIAMETER, DIAMETER, game);
     }

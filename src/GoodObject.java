@@ -26,16 +26,15 @@ public class GoodObject {
     }
 
     // set up method for finding an image
-    public Image getImage(String path) {
+    public Image getImage() {
 
-        URL imageURL = GoodObject.class.getResource(path);
-        Image tempImage = Toolkit.getDefaultToolkit().getImage(imageURL);
+        Image tempImage = Toolkit.getDefaultToolkit().getImage("1.png");
         return tempImage;
     }
 
     // paint goodobject that is called by paint method in game
     public void paint(Graphics g) {
-        image = getImage(randomimage + ".png");
+        image = getImage();
         Graphics2D g2 = (Graphics2D) g;
         g2.drawImage(image, x, y, DIAMETER, DIAMETER, game);
     }

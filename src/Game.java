@@ -5,6 +5,9 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 
+// interface: pieces (bad object, good object, character)
+//inherit: bad object 1,2,3 good object 1, 2
+
 @SuppressWarnings("serial")
 public class Game extends JPanel {
 
@@ -12,10 +15,10 @@ public class Game extends JPanel {
     //  so they can be called within main
     Character character = new Character(this);
     BadObject bad = new BadObject(this);
-    BadObject2 bad2 = new BadObject2(this);
-    BadObject3 bad3 = new BadObject3(this);
+    BadObject bad2 = new BadObject(this);
+    BadObject bad3 = new BadObject(this);
     GoodObject good = new GoodObject(this);
-    GoodObject2 good2 = new GoodObject2(this);
+    GoodObject good2 = new GoodObject(this);
 
     // Establish important variables
     int lives = 3;
@@ -42,6 +45,7 @@ public class Game extends JPanel {
         setFocusable(true);
         Sound.MUSIC.loop();
     }
+
 
     // move is called by main, with move calling each movement method that
     // belongs to other objects in the game
