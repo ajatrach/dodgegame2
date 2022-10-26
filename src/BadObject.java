@@ -28,7 +28,7 @@ public class BadObject {
 
 
     public Image getImage() {
-        Image tempImage = Toolkit.getDefaultToolkit().getImage("5.png");
+        Image tempImage = Toolkit.getDefaultToolkit().getImage(randomimage+".png");
         return tempImage;
     }
 

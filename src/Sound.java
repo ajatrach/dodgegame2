@@ -1,4 +1,4 @@
-
+//methods are depreciated sadly
 import java.applet.Applet;
 import java.applet.AudioClip;
 

@@ -28,7 +28,7 @@ public class GoodObject {
     // set up method for finding an image
     public Image getImage() {
 
-        Image tempImage = Toolkit.getDefaultToolkit().getImage("1.png");
+        Image tempImage = Toolkit.getDefaultToolkit().getImage(randomimage+".png");
         return tempImage;
     }
 

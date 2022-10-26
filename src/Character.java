@@ -24,7 +24,7 @@ public class Character{
 
     // set up method for finding an image
     public Image getImage() {
-        Image tempimage = Toolkit.getDefaultToolkit().getImage("character.png");
+        Image tempimage = Toolkit.getDefaultToolkit().getImage(skin);
         return tempimage;
     }
 
